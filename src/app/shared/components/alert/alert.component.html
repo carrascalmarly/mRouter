@@ -1,0 +1,15 @@
+<ng-container *ngIf="alertFlash.show">
+    <div class="position-absolute w-100 start-0 z-1 p-3 shadow" [ngClass]="alertFlash.bgColor">
+        <div class="d-flex align-items-center text-white justify-content-between">
+            <div class="d-flex align-items-center">
+                <p class="m-0 fs-14">
+                    {{ alertFlash.message }}
+                </p>
+            </div>
+            <div [ngClass]="alertFlash.textColor" *ngIf="alertFlash.closable" (click)="close()">
+                <i [ngClass]="alertFlash.icon"></i>
+            </div>
+        </div>
+    </div>
+</ng-container>
+ 
